@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product details</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo 114.png" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-image: url("assets/images/backgroundmain222.jpg"); */
+}
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+  
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.product-container {
+  
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 40px;
+  background-color: #787a8086;
+  border-radius: 4px;
+  width: 1200px;
+}
+
+/* .img-card{
+    width: 40%;
+} */
+
+.img-card img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 4px;
+  height: 520px;
+  object-fit: cover;
+}
+
+.small-Card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 15px;
+  gap: 12px;
+}
+
+.small-Card img {
+  width: 104px;
+  height: 104px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.small-Card img:active {
+  border: 1px solid #17696a;
+}
+
+.sm-card {
+  border: 2px solid darkred;
+}
+
+.product-info{
+  width: 60%;
+}
+.product-info h3 {
+  font-size: 32px;
+  font-family: Lato;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.product-info h5 {
+  font-size: 24px;
+  font-family: Lato;
+  font-weight: 500;
+  line-height: 130%;
+  color: #ff4242;
+  margin: 6px 0;
+}
+
+.product-info del {
+  color: #a9a9a9;
+}
+
+.product-info p {
+  color: #424551;
+  margin: 15px 0;
+  width: 70%;
+}
+
+.sizes p {
+  font-size: 22px;
+  color: black;
+}
+
+.size-option {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.quantity input {
+  width: 51px;
+  height: 33px;
+  margin-bottom: 15px;
+  padding: 6px;
+}
+/* 
+button {
+  background: #17696a;
+  border-radius: 4px;
+  padding: 10px 37px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #ff4242;
+  transition: ease-in 0.4s;
+} */
+
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  color: #787a80;
+  font-size: 12px;
+  font-family: Lato;
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+
+hr {
+  color: #787a80;
+  width: 58%;
+  opacity: 0.67;
+}
+
+.pagination {
+    color: #787a80;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .product-container{
+    flex-direction: column;
+  }
+  .small-Card img{
+    width: 80px;
+  }
+  .product-info{
+    width: 100%;
+  }
+  echo " product-details-page-html-css-js" >> README.md
+  .product-info p{
+    width: 100%;
+  }
+
+  .delivery{
+    width: 100%;
+  }
+
+  hr{
+    width: 100%;
+  }
+}
+
+</style>
+
+<body id="#top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="readme-images\project-logo copywhite.png" alt="entxhub logo">
+      </a>
+
+      <div class="header-actions">
+  <ul class="navbar-list">
+
+    <li>
+      <a href="./index.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Home</a>
+    </li>
+
+    <li>
+      <a href="movie.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Movie</a>
+    </li>
+
+    <li>
+      <a href="events.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Events</a>
+    </li>
+
+    <li>
+      <a href="games.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Games</a>
+    </li>
+
+    <li>
+      <a href="shop.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Shop</a>
+    </li>
+
+    <li>
+      <a href="aboutus.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">About</a>
+    </li>
+
+
+        </ul>
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+        <a href="cart.html">
+          <button class="cartlogo" id="cartlogo">
+       <ion-icon name="cart"></ion-icon>
+</button></a>
+       
+
+        <button class="btn btn-primary">Login</button>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Filmlane logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #MOVIE DETAIL
+      -->
+
+      
+      <section class="hero">
+        <div class="container">
+          <section class="product-container">
+            <!-- left side -->
+            <div class="img-card">
+                <img src="assets\images\shop1.jpg" alt="" id="featured-image">
+                <!-- small img -->
+                <div class="small-Card">
+                    <img src="assets\images\shop1.jpg" alt="" class="small-Img">
+                    <img src="assets\images\shop1.jpg" alt="" class="small-Img">
+                    <img src="assets\images\shop1.jpg" alt="" class="small-Img">
+                    <img src="assets\images\shop1.jpg" alt="" class="small-Img">
+                </div>
+            </div>
+            <!-- Right side -->
+
+            <div class="product-info">
+              <br><br>
+              <h3 style="font-weight: bolder; font-family: Audiowide, sans-serif; color: rgb(22, 8, 8);background-color: #787a80;border: 3px solid black;">&nbsp;Barbie T-Shirt</h3>
+            
+              <p style="color: #ffffff;">Unleash your superhero style with our Avengers Logo T-Shirt and Shorts Set, perfect for fans of the iconic superhero team. The T-shirt features a vibrant Avengers logo, and the set provides comfort and versatility for various occasions.
+<br><br>
+               <span style="font-weight: bold; color: #f5f5fc;"> Key Features:</span>
+                
+                High-quality cotton blend for comfort
+                <br>Bold Avengers logo on the T-shirt
+                <br>Classic fit and relaxed style
+                
+              
+                
+
+                <div class="sizes">
+                    <p style="font-weight: bold;color: #feffff;">Size:</p>
+                    <select name="Size" id="size" class="size-option" style=" box-shadow: 
+                    0 0 0 2px black, /* Outer black border (adjust the width as needed) */
+                    0 0 0 4px white;
+                    border-radius: 4px;
+                    background-color: #787a80; ">
+                        <option value="xxl">XXL</option>
+                        <option value="xl">XL</option>
+                        <option value="medium">Medium</option>
+                        <option value="small">Small</option>
+                    </select>
+                </div>
+    
+                <div class="quantity">
+                    <input type="number" value="1" min="1"> 
+                    <h5>Price: Rs 1600 <del>Rs 2000</del></h5>
+                    <button class="btn btn-primary">ADD TO CART</button>
+                </div>
+    
+                
+            </div>
+</div></section>
+
+
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script >
+    let featuedImg = document.getElementById('featured-image');
+let smallImgs = document.getElementsByClassName('small-Img');
+
+smallImgs[0].addEventListener('click', () => {
+  featuedImg.src = smallImgs[0].src;
+  smallImgs[0].classList.add('sm-card')
+  smallImgs[1].classList.remove('sm-card')
+  smallImgs[2].classList.remove('sm-card')
+  smallImgs[3].classList.remove('sm-card')
+  smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[1].addEventListener('click', () => {
+  featuedImg.src = smallImgs[1].src;
+  smallImgs[0].classList.remove('sm-card')
+  smallImgs[1].classList.add('sm-card')
+  smallImgs[2].classList.remove('sm-card')
+  smallImgs[3].classList.remove('sm-card')
+  smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[2].addEventListener('click', () => {
+  featuedImg.src = smallImgs[2].src;
+  smallImgs[0].classList.remove('sm-card')
+  smallImgs[1].classList.remove('sm-card')
+  smallImgs[2].classList.add('sm-card')
+  smallImgs[3].classList.remove('sm-card')
+  smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[3].addEventListener('click', () => {
+  featuedImg.src = smallImgs[3].src;
+  smallImgs[0].classList.remove('sm-card')
+  smallImgs[1].classList.remove('sm-card')
+  smallImgs[2].classList.remove('sm-card')
+  smallImgs[3].classList.add('sm-card')
+  smallImgs[4].classList.remove('sm-card')
+})
+smallImgs[4].addEventListener('click', () => {
+  featuedImg.src = smallImgs[4].src;
+  smallImgs[0].classList.remove('sm-card')
+  smallImgs[1].classList.remove('sm-card')
+  smallImgs[2].classList.remove('sm-card')
+  smallImgs[3].classList.remove('sm-card')
+  smallImgs[4].classList.add('sm-card')
+})
+  </script>
+
+
+</body>
+
+</html>

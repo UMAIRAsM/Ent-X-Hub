@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EntXHUb_Imaginary World One Click Away</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+
+
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+ 
+
+
+#carousel {
+  position: relative;
+  
+    height: 525px;  
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  padding-bottom: 0%;
+  margin-bottom: 0;
+}
+#carousel div {
+  position: absolute;
+  transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+  opacity: 1;
+  
+}
+#carousel div img {
+  width: 400px; 
+  
+  transition: width 400ms;
+   -webkit-user-drag: none;
+   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+   border-radius: 10px;
+
+
+}
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideLeft img {
+  width: 200px;
+}
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideRight img {
+  width: 200px;
+}
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel img:hover {
+   cursor:    pointer;
+  
+}
+#carousel div.prev img {
+  width: 300px;
+  
+}
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.prevLeftSecond img {
+  width: 200px;
+}
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel div.next img {
+  width: 300px;
+}
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.nextRightSecond img {
+  width: 200px;
+}
+
+/*previous or next buttons css*/
+
+.buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+}
+
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+
+
+
+
+.titleeee {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+  line-height:2;
+  position: absolute;
+  top: 640px;
+  /* background-color: rgba(49, 52, 54, 0.74); */
+  border-bottom: 2px solid #faf3f3;
+  padding-bottom: 0px; 
+  border-top: 2px solid #faf3f3;
+  padding-top: 0px; 
+  max-height: 200px;
+  margin-right: 30px;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 0 0 10px rgba(250, 249, 249, 0.5);
+}
+
+h1 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 45px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(189, 65, 3, 0.5);
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #FFF;
+  transition: .35s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-family: "Montserrat";
+}
+
+.white-mode:hover {
+  background-color: #FFF;
+  color: #122;
+}
+
+
+
+</style>
+
+<body id="top" >
+ 
+<section class="umair">
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="readme-images\project-logo copywhite.png" alt="EntxHub logo">
+      </a>
+
+      <div class="header-actions">
+  <ul class="navbar-list">
+
+    <li>
+      <a href="./index.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Home</a>
+    </li>
+
+    <li>
+      <a href="movie.html" class="navbar-link" style="font-family: 'Pacifico', cursive;color:hsl(17, 68%, 58%); font-weight: bold;">Watch</a>
+    </li>
+
+    <li>
+      <a href="events.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Events</a>
+    </li>
+
+    <li>
+      <a href="games.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Games</a>
+    </li>
+
+    <li>
+      <a href="shop.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Shop</a>
+    </li>
+
+    <li>
+      <a href="aboutus.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">About</a>
+    </li>
+
+
+        </ul>
+        
+        <button class="search-btn" id="search-button">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <a href="cart.html">
+           <button class="cartlogo" id="cartlogo">
+        <ion-icon name="cart"></ion-icon>
+</button></a>
+
+        
+        <div class="search-box" id="search-box">
+          <input type="text" placeholder="&nbsp;Search..." style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-style: italic;">
+          
+          
+        </div>
+        
+       
+
+
+        <a href="loginmain.html"><button class="btn btn-primary" >Login</button></a>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="readme-images\project-logo copywhite.png" alt="EntXHUb logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
+        <div class="container">
+          <!-- <h1 style="color: hsl(17, 68%, 58%);text-align: center;font-style: italic;font-weight: bold;font-family: Audiowide, sans-serif; font-style: italic;">SHOP</h1>
+         -->
+         
+          <br><br><br><br><br><br><br><br><br><br><br>
+
+          <div id="carousel" class="carousel">
+
+            <div id='item_1' class="hideLeft">
+             <img src="assets\images\slide12.png">
+           </div>
+     
+           <div id='item_2' class="prevLeftSecond">
+             <img src="assets\images\slide11.png">
+           </div>
+     
+           <div id='item_3' class="prev">
+             <img src="assets\images\slide13.png">
+           </div>
+     
+           <div id='item_4' class="selected">
+             <img src="assets\images\slide17.png">
+           </div>
+     
+           <div id='item_5' class="next">
+             <img src="assets\images\slide19.png">
+           </div>
+     
+           <div id='item_6' class="nextRightSecond">
+             <img src="assets\images\slide18.png">
+           </div>
+     
+           <div id='item_7' class="hideRight">
+             <img src="assets\images\slide16.png">
+           </div>
+     
+           <div id='item_8' class="hideRight">
+             <img src="assets\images\slide14.png">
+           </div>
+     
+         </div>
+     
+
+
+
+
+         
+         <div class="buttons">
+          <button class="button-82-pushable" role="button" id="prev">
+           <!-- <span style="font-weight: bolder;font-size: larger;width: 2px;"><h1>&#10147;</h1></span> -->
+         </button>
+    
+    
+          <button class="button-82-pushable" role="button" id="next">
+           <!-- <span class="button-82-shadow"></span><span class="button-82-edge"></span><span class="button-82-front text">Next</span> -->
+         </button>
+        </div>
+
+
+
+        
+
+<div class="titleeee">
+  <h1>Elevate Your Cinematic Journey: Beyond Screens, Into Dreams</h1>
+ 
+  
+ </div>
+
+      
+    
+
+<section class="upcoming">
+  <div class="container">
+
+    <div class="flex-wrapper">
+
+      <div class="title-wrapper">
+        
+
+        <h2 id="movie-section-button" class="h2 section-title"> MOVIES</h2>
+      </div>
+
+      <div id="filter-btn">
+        
+        
+
+    </div>
+      <ul class="filter-list">
+
+        <li>
+          <a href="#movie-section-button"><button class="filter-btn" style="font-family: 'Pacifico', cursive;">MOVIES</button></a>
+        </li>
+        <li>
+          <a href="#webseries-section-button"><button class="filter-btn" style="font-family: 'Pacifico', cursive;">WEB SERIES</button></a>
+        </li>
+
+        <li>
+          <a href="#anime-section-button"><button class="filter-btn" style="font-family: 'Pacifico', cursive;">ANIME</button></a>
+        </li>
+
+        <li>
+          <a href="#podcast-section-button"><button class="filter-btn" style="font-family: 'Pacifico', cursive;">PODCASTS</button></a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/m1.png" alt="The Northman movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">The Dark Knight Rises</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+              
+            </div>
+
+            <div class="rating">
+              
+
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            
+            <figure class="card-banner" >
+              
+              <img src="assets\images\m5.png" alt="Doctor Strange in the Multiverse of Madness movie poster">
+         <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button> </figure>
+          </a>
+          <!-- <h3 class="card-title">Maula Jatt</h3> -->
+           <a href="./movie-details.html">
+              <h3 class="card-title">Maula Jatt</h3>
+            </a>
+
+          <div class="title-wrapper">
+           
+            
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+              
+
+              
+            </div>
+
+            <div class="rating">
+             
+
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/m2.png" alt="Memory movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+         
+            <a href="./movie-details.html">
+              <h3 class="card-title">Inception</h3>
+            </a>
+
+          <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+           
+
+            <div class="duration">
+             
+            </div>
+
+            <div class="rating">
+              
+
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/m3.png"
+                alt="The Unbearable Weight of Massive Talent movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Interstellar</h3>
+            </a>
+<div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+              
+
+            
+            </div>
+
+            <div class="rating">
+              
+
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+      <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/m4.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+           
+              <a href="./movie-details.html">
+                <h3 class="card-title">Jurassic World</h3>
+              </a>
+
+               <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+              
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+               
+
+                
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/moooovie1.jpg"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+              <a href="./movie-details.html">
+                <h3 class="card-title">Oppenheimer</h3>
+              </a>
+
+              
+            <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+              
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+                
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/m6.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">Avengers Infinity War</h3>
+              </a>
+
+              <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+               
+
+              <div class="duration">
+              
+              </div>
+
+              <div class="rating">
+                 
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+    </ul>
+    <br>
+
+    
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+
+        
+        
+</section>
+
+<section class="upcoming">
+  <div class="container">
+
+    <div class="flex-wrapper">
+
+      <div class="title-wrapper">
+        
+
+        <h2 id="anime-section-button" class="h2 section-title"> ANIME</h2>
+      </div>
+
+      
+
+    </div>
+
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/tokyo ghoul.png" alt="The Northman movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Tokyo Ghoul</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+             
+
+            <div class="duration">
+               
+            </div>
+
+            <div class="rating">
+               
+
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/death note.png"
+                alt="Doctor Strange in the Multiverse of Madness movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+         
+            <a href="./movie-details.html">
+              <h3 class="card-title">Death Note</h3>
+            </a>
+
+ <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+        
+            </div>
+
+            <div class="rating">
+             
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/attack on titians.png" alt="Memory movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Attack On Titan</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+           
+            </div>
+
+            <div class="rating">
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/dragon ball z.png"
+                alt="The Unbearable Weight of Massive Talent movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+        
+            <a href="./movie-details.html">
+              <h3 class="card-title">Dragon Ball Z</h3>
+            </a>
+  <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+      
+
+            <div class="duration">
+              
+            </div>
+
+            <div class="rating">
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+      <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/one piece.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">One Piece</h3>
+              </a>
+
+            <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+           
+
+              <div class="duration">
+               
+              </div>
+
+              <div class="rating">
+                
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/pokemon.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+         
+              <a href="./movie-details.html">
+                <h3 class="card-title">Pokemon</h3>
+              </a>
+   <div class="title-wrapper">
+           
+            </div>
+
+            <div class="card-meta">
+             
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+               
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/aruto.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">Naruto</h3>
+              </a>
+<div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+          
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+             
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+    </ul>
+    <br>
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        
+</section>
+
+<section class="upcoming">
+  <div class="container">
+
+    <div class="flex-wrapper">
+
+      <div class="title-wrapper">
+        
+
+        <h2 id="webseries-section-button"  class="h2 section-title"> WEB SERIES</h2>
+      </div>
+
+      
+
+    </div>
+
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/ws1.png" alt="The Northman movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+         
+            <a href="./movie-details.html">
+              <h3 class="card-title">Lucifer</h3>
+            </a>
+
+             <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+            
+            </div>
+
+            <div class="rating">
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/ws2.png"
+                alt="Doctor Strange in the Multiverse of Madness movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Dark</h3>
+            </a>
+
+      <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+        
+
+            <div class="duration">
+              
+            </div>
+
+            <div class="rating">
+             
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/ws5.png" alt="Memory movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Money Heist</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+         
+
+            <div class="duration">
+              
+            </div>
+
+            <div class="rating">
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/ws4.png"
+                alt="The Unbearable Weight of Massive Talent movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Peaky Blinders</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+           
+            <div class="duration">
+         
+            </div>
+
+            <div class="rating">
+             
+            </div>
+          </div>
+
+        </div>
+      </li>
+      <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/ws3.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">Loki</h3>
+              </a>
+<div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+             
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+              
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/ws6.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">Squid Game</h3>
+              </a>
+<div class="title-wrapper">
+              
+            </div>
+
+            <div class="card-meta">
+         
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+               
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/ws7.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">Stranger Things</h3>
+              </a>
+
+              <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+              
+
+              <div class="duration">
+               
+              </div>
+
+              <div class="rating">
+               
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+    </ul>
+    <br>
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        
+</section>
+
+<section class="upcoming">
+  <div class="container">
+
+    <div class="flex-wrapper">
+
+      <div class="title-wrapper">
+       
+
+        <h2 id="podcast-section-button"  class="h2 section-title"> PODCASTS</h2>
+      </div>
+
+      
+
+    </div>
+
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/p1.png" alt="The Northman movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Tauha Ibne Jalil</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+           
+
+            <div class="duration">
+        
+            </div>
+
+            <div class="rating">
+            
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/p4.png"
+                alt="Doctor Strange in the Multiverse of Madness movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Gold Minds</h3>
+            </a>
+
+            <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+          
+            <div class="duration">
+              
+            </div>
+
+            <div class="rating">
+        
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/p5.png" alt="Memory movie poster">
+              <button class="play-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+              </button>
+            </figure>
+          </a>
+
+          
+            <a href="./movie-details.html">
+              <h3 class="card-title">Andrew Tate</h3>
+            </a>
+
+           <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+          
+
+            <div class="duration">
+              
+            </div>
+
+            <div class="rating">
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="movie-card">
+
+          <a href="./movie-details.html">
+            <figure class="card-banner">
+              <img src="./assets/images/p2.png"
+                alt="The Unbearable Weight of Massive Talent movie poster">
+                <button class="play-btn">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </button>
+            </figure>
+          </a>
+
+            <a href="./movie-details.html">
+              <h3 class="card-title">Junaid Akram</h3>
+            </a>
+
+           
+          <div class="title-wrapper">
+          </div>
+
+          <div class="card-meta">
+            
+
+            <div class="duration">
+             
+            </div>
+
+            <div class="rating">
+              
+            </div>
+          </div>
+
+        </div>
+      </li>
+      <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/p3.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+           
+              <a href="./movie-details.html">
+                <h3 class="card-title">Muzammil Hassan</h3>
+              </a>
+
+               <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+         
+
+              <div class="duration">
+            
+              </div>
+
+              <div class="rating">
+                
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="./movie-details.html">
+              <figure class="card-banner">
+                <img src="./assets/images/p1.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  <button class="play-btn">
+                    <ion-icon name="play-circle-outline"></ion-icon>
+                  </button>
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title">Tauha Ibne Jalil</h3>
+              </a>
+<div class="title-wrapper">
+           
+            </div>
+
+            <div class="card-meta">
+           
+
+              <div class="duration">
+                
+              </div>
+
+              <div class="rating">
+         
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li>
+          <div class="movie-card">
+
+            <a href="C:\Users\madil\Desktop\umair web\filmlane-master\showmore.html                                                                                                                                                                                                                                                                                                                                                                                                                               ">
+              <figure class="card-banner">
+                <img src="./assets/images/showmore.png"
+                  alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  
+              </figure>
+            </a>
+
+            
+              <a href="./movie-details.html">
+                <h3 class="card-title"></h3>
+              </a>
+
+             <div class="title-wrapper">
+            </div>
+
+            <div class="card-meta">
+            
+
+              <div class="duration">
+              
+              </div>
+
+              <div class="rating">
+              
+              </div>
+            </div>
+
+          </div>
+        </li>
+
+    </ul>
+    <br>
+    <ul class="movies-list  has-scrollbar">
+
+      <li>
+        
+</section>
+
+
+
+
+
+
+</div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="js/jquery.hislide.js"></script>
+<script>
+$('.slide').hislide();
+
+
+</script>
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+
+
+      <!-- 
+        - #CTA
+      -->
+      
+    </section>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="readme-images\project-logo copywhite.png" alt="EntXHub logo">
+          </a>
+
+          <ul class="footer-list">
+
+            <li>
+              <a href="./index.html" class="footer-link">Home</a>
+            </li>
+
+            <li>
+              <a href="movie.html" class="footer-link">Movie</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">TV Show</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Web Series</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-link">Faq</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Terms of use</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Privacy</a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+<!-- <script>let slideIndex = 0;
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+  
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+  
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+  }
+  
+  showSlides(); -->
+  <script>
+    const $ = str => document.querySelector(str);
+const $$ = str => document.querySelectorAll(str);
+
+(function() {
+    if (!window.app) {
+        window.app = {};
+    }
+    app.carousel = {
+        removeClass: function(el, classname='') {
+            if (el) {
+                if (classname === '') {
+                    el.className = '';
+                } else {
+                    el.classList.remove(classname);
+                }
+                return el;
+            }
+            return;
+        },
+        reorder: function() {
+            let childcnt = $("#carousel").children.length;
+            let childs = $("#carousel").children;
+
+            for (let j=0; j< childcnt; j++) {
+                childs[j].dataset.pos = j;
+            }
+        },
+        move: function(el) {
+            let selected = el;
+
+            if (typeof el === "string") {
+            console.log(`got string: ${el}`);
+                selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
+                console.dir(selected);
+            }
+
+            let curpos = parseInt(app.selected.dataset.pos);
+            let tgtpos = parseInt(selected.dataset.pos);
+
+            let cnt = curpos - tgtpos;
+            let dir = (cnt < 0) ? -1 : 1;
+            let shift = Math.abs(cnt);
+
+            for (let i=0; i<shift; i++) {
+                let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
+
+                if (dir == -1) {
+                    el.dataset.pos = $("#carousel").children.length;
+                    $('#carousel').append(el);
+                } else {
+                    el.dataset.pos = 0;
+                    $('#carousel').prepend(el);
+                }
+
+                app.carousel.reorder();
+            }
+
+
+            app.selected = selected;
+            let next = selected.nextElementSibling;// ? selected.nextElementSibling : selected.parentElement.firstElementChild;
+            var prev = selected.previousElementSibling; // ? selected.previousElementSibling : selected.parentElement.lastElementChild;
+            var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
+            var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
+
+            selected.className = '';
+            selected.classList.add("selected");
+
+            app.carousel.removeClass(prev).classList.add('prev');
+            app.carousel.removeClass(next).classList.add('next');
+
+            app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
+            app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
+
+            app.carousel.nextAll(nextSecond).forEach(item=>{ item.className = ''; item.classList.add('hideRight') });
+            app.carousel.prevAll(prevSecond).forEach(item=>{ item.className = ''; item.classList.add('hideLeft') });
+
+        },
+        nextAll: function(el) {
+            let els = [];
+
+            if (el) {
+                while (el = el.nextElementSibling) { els.push(el); }
+            }
+
+            return els;
+
+        },
+        prevAll: function(el) {
+            let els = [];
+
+            if (el) {
+                while (el = el.previousElementSibling) { els.push(el); }
+            }
+
+
+            return els;
+        },
+        keypress: function(e) {
+            switch (e.which) {
+                case 37: // left
+                    app.carousel.move('prev');
+                    break;
+
+                case 39: // right
+                    app.carousel.move('next');
+                    break;
+
+                default:
+                    return;
+            }
+            e.preventDefault();
+            return false;
+        },
+        select: function(e) {
+        console.log(`select: ${e}`);
+            let tgt = e.target;
+            while (!tgt.parentElement.classList.contains('carousel')) {
+                tgt = tgt.parentElement;
+            }
+
+            app.carousel.move(tgt);
+
+        },
+        previous: function(e) {
+            app.carousel.move('prev');
+        },
+        next: function(e) {
+            app.carousel.move('next');
+        },
+        doDown: function(e) {
+        console.log(`down: ${e.x}`);
+            app.carousel.state.downX = e.x;
+        },
+        doUp: function(e) {
+        console.log(`up: ${e.x}`);
+            let direction = 0,
+                velocity = 0;
+
+            if (app.carousel.state.downX) {
+                direction = (app.carousel.state.downX > e.x) ? -1 : 1;
+                velocity = app.carousel.state.downX - e.x;
+
+                if (Math.abs(app.carousel.state.downX - e.x) < 10) {
+                    app.carousel.select(e);
+                    return false;
+                }
+                if (direction === -1) {
+                    app.carousel.move('next');
+                } else {
+                    app.carousel.move('prev');
+                }
+                app.carousel.state.downX = 0;
+            }
+        },
+        init: function() {
+            document.addEventListener("keydown", app.carousel.keypress);
+           // $('#carousel').addEventListener("click", app.carousel.select, true);
+            $("#carousel").addEventListener("mousedown", app.carousel.doDown);
+            $("#carousel").addEventListener("touchstart", app.carousel.doDown);
+            $("#carousel").addEventListener("mouseup", app.carousel.doUp);
+            $("#carousel").addEventListener("touchend", app.carousel.doup);
+
+            app.carousel.reorder();
+            $('#prev').addEventListener("click", app.carousel.previous);
+            $('#next').addEventListener("click", app.carousel.next);
+            app.selected = $(".selected");
+
+        },
+        state: {}
+
+    }
+    app.carousel.init();
+})();
+  </script>
+  
+
+  <!-- 
+    - custom js link
+  --> <script src="assets\js\script.js"></script> 
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+
+          
+          <!-- <h1 style="color: rgb(190, 211, 3); text-align: center; margin-top: 5px;font-weight: bold;">
+            HEAD OFFICE
+          </h1>
+          
+          <img src="C:\Users\madil\Desktop\umair web\filmlane-master\sean-pollock-PhYq704ffdA-unsplash.jpg" alt="" style="display: block; margin: 0 auto; max-width: 100%; height: 560px;margin-bottom: 10px;">
+          <p style="margin: 0 auto; max-width: 800px; padding: 10px; color: antiquewhite; text-align: center;">
+            I'm Muhammad Umair Aslam, a software engineering student from Karachi, Pakistan, currently studying at FAST University. I have a deep passion for technology and enjoy exploring emerging trends in the software industry. Beyond tech, I'm an avid reader, appreciate art, and actively engage with my local community through tech-related events and clubs. My goal is to contribute meaningfully to the field of software engineering and tackle real-world challenges with innovative solutions. Let's connect and explore the exciting world of technology together!
+          </p>
+                     
+           
+          <h1 style="color: rgb(190, 211, 3);margin-top: 10px; text-align: center; margin-top: 5px;font-weight: bold;">
+            OUR GOAL
+          </h1>
+          <img src="C:\Users\madil\Desktop\umair web\filmlane-master\assets\van-tay-media-Tv2AtkG_ilM-unsplash.jpg" alt="" style="display: block; margin: 0 auto; max-width: 100%; height: 560px;">
+          <p style="margin: 0 auto; max-width: 800px; padding: 10px; color: antiquewhite; text-align: center;">
+            Our website's primary goal is to offer a seamless and enjoyable entertainment experience. We strive to provide a wide array of entertainment options, including movies, games, merchandise purchasing, and event ticketing, all in one convenient location. Our mission is to create an engaging platform that brings together entertainment lovers, making it easier for them to explore, engage, and enjoy their favorite forms of entertainment hassle-free.
+          </p>
+
+          <h1 style="color: rgb(190, 211, 3);margin-top: 10px; text-align: center; margin-top: 5px;font-weight: bold;">
+           THANKYOU
+          </h1>
+          <img src="C:\Users\madil\Desktop\umair web\filmlane-master\assets\images\WhatsApp Image 2023-10-02 at 00.40.29_179aa2bb.jpg" alt="" style="display: block; margin: 0 auto; max-width: 100%; height: 560px;margin-bottom: 10px;">
+          <h1 style="color: rgb(164, 165, 159); font-size: 180%;   margin-top: 10px; text-align: center; margin-top: 5px;font-weight: bold;">
+            MUHAMMAD UMAIR ASLAM
+           </h1>
+ 
+
+      <br><br><br>
+
+ 
+
+
+
+
+
+
+
+</section>
+
+      
+        - #UPCOMING
+      -->
+
+
+
+      <!-- 
+        - #CTA
+      -->
+      
+    </section>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+</body>
+</html>

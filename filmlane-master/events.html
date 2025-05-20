@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmlane - Best movie collections</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/eventstyle.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top" >
+ 
+<section class="umair">
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="readme-images\project-logo copywhite.png" alt="EntxHub logo">
+      </a>
+
+      <div class="header-actions">
+<ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Home</a>
+          </li>
+
+          <li>
+            <a href="movie.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Watch</a>
+          </li>
+
+          <li>
+            <a href="events.html" class="navbar-link" style="font-family: 'Pacifico', cursive;color: hsl(17, 68%, 58%);">Events</a>
+          </li>
+
+          <li>
+            <a href="games.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Games</a>
+          </li>
+
+          <li>
+            <a href="shop.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Shop</a>
+          </li>
+
+          <li>
+            <a href="aboutus.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">About</a>
+          </li>
+
+        </ul>
+        
+        <button class="search-btn" id="search-button">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+        <a href="filmlane-master\cart.html">
+          <button class="cartlogo" id="cartlogo">
+       <ion-icon name="cart"></ion-icon>
+</button></a>
+        <div class="search-box" id="search-box">
+          <input type="text" placeholder="&nbsp;Search..." style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-style: italic;">
+          
+          
+        </div>
+        
+       
+
+
+        <a href="loginmain.html"><button class="btn btn-primary" >Login</button></a>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="readme-images\project-logo copywhite.png" alt="EntXHUb logo">
+          </a>
+ 
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
+        <div class="container">
+         
+
+          <style>
+            .container22 {
+                display: flex;
+                align-items: center;
+                border: 2px solid white;
+                padding: 1px;
+                flex: 1;
+            }
+    
+            .image-column22 {
+                flex: 1;
+                padding: 2px;
+                border-right: 2px solid white;
+            } 
+          
+            .description-column22 { 
+              margin-left: 10px;
+                flex: 1.5; 
+                padding: 2px;
+                
+            }
+          
+            .container11 {
+            display: flex;
+            border: 2px solid white;
+            padding: 10px;
+        }
+
+        .image-column11 {
+                flex: 1;
+                padding: 2px;
+                border-left: 2px solid white;
+            } 
+
+        .description-column11 {
+            flex: 2;
+            padding: 10px;
+        }
+
+      .description-heading {
+          font-weight: bold;
+          color: rgb(255, 179, 129);
+      }
+  </style>
+<br>
+  <h1 style="color: hsl(17, 68%, 58%);text-align: center;font-style: italic;font-weight: bold;font-family: Audiowide, sans-serif;">EVENTS</h1>
+    <br>
+        <div class="container22">
+  <div class="image-column22">
+    <img style="height: 350px; max-width: 100%;" src="koko.jpg" alt="Image Description">
+  </div>
+  <div class="description-column22">
+    <h2 class="description-heading">Unforgettable Night of Music</h2>
+    <p style="color: beige; font-family: 'Playfair Display', serif; font-weight: 700;font-size: large;">Join us for an enchanting evening of music and entertainment on Sunday, October 25th. Get ready to be swept away by the melodious tunes and captivating performances that will make this night truly unforgettable.</p>
+    <p style="color: beige;"><span style="font-weight: bold;color: beige;">DATE:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VENUE:</span>22nd March 2024&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;EUROPEAN CLUB</p>
+    <p style="position: absolute; font-weight: bold; font-size: larger;color: hsl(17, 68%, 58%); margin-top: 10px;">
+      <span style="color: white; display: inline;">Price:</span> Rs 1200
+    </p>
+    <button style="
+    margin-left: 610px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid hsl(17, 68%, 58%);
+    color: hsl(17, 68%, 58%);
+    background: transparent;
+    padding: 8px 16px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.5;
+    height: auto;
+">Book Now</button>
+
+
+
+  </div>
+</div>
+
+
+<div class="container22">
+  <div class="description-column22">
+   <h2 class="description-heading">CARNIVAL</h2>
+   <p style="color: beige; font-family: 'Playfair Display', serif; font-weight: 700;font-size: large;">Join us for Get ready for a day of pure joy and excitement at our upcoming "Carnival Extravaganza!" This grand celebration promises an unforgettable experience for all ages, as we transform theater park into a vibrant world of fun, games, and adventure.</p>
+   <p style="color: beige;"><span style="font-weight: bold;color: beige;">DATE:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VENUE:</span>22nd March 2024&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;THEATER PARK</p>
+  <p style="position: absolute; font-weight: bold; font-size: larger;color: hsl(17, 68%, 58%); margin-top: 10px;">
+  <span style="color: white; display: inline;">Price:</span> Rs 3000
+</p>
+
+   <button style="
+    margin-left: 610px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid hsl(17, 68%, 58%);
+    color: hsl(17, 68%, 58%);
+    background: transparent;
+    padding: 8px 16px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.5;
+    height: auto;
+">Book Now</button>
+
+
+ </div>
+ <div class="image-column11">
+   <img style="height: 350px; max-width: 100%;" src="themepark.jpg" alt="Image Description">
+ </div>
+
+</div>
+
+
+<div class="container22">
+  <div class="image-column22">
+    <img style="height: 350px; max-width: 100%;" src="boat.jpg" alt="Image Description">
+  </div>
+  <div class="description-column22">
+    <h2 class="description-heading">BOAT PARADE</h2>
+    <p style="color: beige; font-family: 'Playfair Display', serif; font-weight: 700;font-size: large;">Join us for most exciting parade of the year boat parade at the hillpark lake along with your families.</p>
+    <p style="color: beige;"><span style="font-weight: bold;color: beige;">DATE:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VENUE:</span>22nd March 2024&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HILLPARK LAKE</p>
+    <p style="position: absolute; font-weight: bold; font-size: larger;color: hsl(17, 68%, 58%); margin-top: 10px;">
+      <span style="color: white; display: inline;">Price:</span> Rs 700
+    </p>
+    <button style="
+    margin-left: 610px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid hsl(17, 68%, 58%);
+    color: hsl(17, 68%, 58%);
+    background: transparent;
+    padding: 8px 16px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.5;
+    height: auto;
+">Book Now</button>
+
+
+  </div>
+</div>   
+   
+
+
+<div class="container22">
+   <div class="description-column22">
+    <h2 class="description-heading">Riveting Drama Unfolds: 'Echoes of Emotion'</h2>
+    <p style="color: beige; font-family: 'Playfair Display', serif; font-weight: 700;font-size: large;">upcoming theatrical performance, "Drama Unveiled: Echoes of Emotion," promises to be an unforgettable experience that we'd love to share with you.</p>
+    <p style="color: beige;"><span style="font-weight: bold;color: beige;">DATE:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;VENUE:</span>22nd March 2024&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;EUROPEAN CLUB</p>
+    <p style="position: absolute; font-weight: bold; font-size: larger;color: hsl(17, 68%, 58%); margin-top: 10px;">
+      <span style="color: white; display: inline;">Price:</span> Rs 2200
+    </p>
+    <button style="
+    margin-left: 610px;
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid hsl(17, 68%, 58%);
+    color: hsl(17, 68%, 58%);
+    background: transparent;
+    padding: 8px 16px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.5;
+    height: auto;
+">Book Now</button>
+
+
+  </div>
+  <div class="image-column11">
+    <img style="height: 350px; max-width: 100%;" src="pillay.jpg" alt="Image Description">
+  </div>
+ 
+</div><!-- 
+
+      <section class="service">
+        <div class="container">
+
+          <div class="service-banner">
+            <figure>
+              <img src="./assets/images/service-banner.jpg" alt="HD 4k resolution! only $3.99">
+            </figure>
+
+            <a href="./assets/images/service-banner.jpg" download class="service-btn">
+              <span>Download</span>
+
+              <ion-icon name="download-outline"></ion-icon>
+            </a>
+          </div>
+
+          <div class="service-content">
+
+            <p class="service-subtitle">Our Services</p>
+
+            <h2 class="h2 service-title">Download Your Shows Watch Offline.</h2>
+
+            <p class="service-text">
+              Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod tempor.There are many variations of
+              passages of lorem
+              Ipsum available, but the majority have suffered alteration in some injected humour.
+            </p>
+
+            <ul class="service-list">
+
+              <li>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="tv"></ion-icon>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Enjoy on Your TV.</h3>
+
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="videocam"></ion-icon>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Watch Everywhere.</h3>
+
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div> -->
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+          
+          <!-- <h1 style="color: rgb(190, 211, 3); text-align: center; margin-top: 5px;font-weight: bold;">
+            HEAD OFFICE
+          </h1>
+          
+          <img src="C:\Users\madil\Desktop\umair web\filmlane-master\sean-pollock-PhYq704ffdA-unsplash.jpg" alt="" style="display: block; margin: 0 auto; max-width: 100%; height: 560px;margin-bottom: 10px;">
+          <p style="margin: 0 auto; max-width: 800px; padding: 10px; color: antiquewhite; text-align: center;">
+            I'm Muhammad Umair Aslam, a software engineering student from Karachi, Pakistan, currently studying at FAST University. I have a deep passion for technology and enjoy exploring emerging trends in the software industry. Beyond tech, I'm an avid reader, appreciate art, and actively engage with my local community through tech-related events and clubs. My goal is to contribute meaningfully to the field of software engineering and tackle real-world challenges with innovative solutions. Let's connect and explore the exciting world of technology together!
+          </p>
+                     
+           
+          <h1 style="color: rgb(190, 211, 3);margin-top: 10px; text-align: center; margin-top: 5px;font-weight: bold;">
+            OUR GOAL
+          </h1>
+          <img src="C:\Users\madil\Desktop\umair web\filmlane-master\assets\van-tay-media-Tv2AtkG_ilM-unsplash.jpg" alt="" style="display: block; margin: 0 auto; max-width: 100%; height: 560px;">
+          <p style="margin: 0 auto; max-width: 800px; padding: 10px; color: antiquewhite; text-align: center;">
+            Our website's primary goal is to offer a seamless and enjoyable entertainment experience. We strive to provide a wide array of entertainment options, including movies, games, merchandise purchasing, and event ticketing, all in one convenient location. Our mission is to create an engaging platform that brings together entertainment lovers, making it easier for them to explore, engage, and enjoy their favorite forms of entertainment hassle-free.
+          </p>
+
+          <h1 style="color: rgb(190, 211, 3);margin-top: 10px; text-align: center; margin-top: 5px;font-weight: bold;">
+           THANKYOU
+          </h1>
+          <img src="C:\Users\madil\Desktop\umair web\filmlane-master\assets\images\WhatsApp Image 2023-10-02 at 00.40.29_179aa2bb.jpg" alt="" style="display: block; margin: 0 auto; max-width: 100%; height: 560px;margin-bottom: 10px;">
+          <h1 style="color: rgb(164, 165, 159); font-size: 180%;   margin-top: 10px; text-align: center; margin-top: 5px;font-weight: bold;">
+            MUHAMMAD UMAIR ASLAM
+           </h1>
+ -->
+
+      <br><br><br>
+
+
+
+
+
+
+
+
+
+</section>
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+
+
+      <!-- 
+        - #CTA
+      -->
+      
+    </section>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="readme-images\project-logo copywhite.png" alt="EntXHub logo">
+          </a>
+
+          <ul class="footer-list">
+
+            <li>
+              <a href="./index.html" class="footer-link">Home</a>
+            </li>
+
+            <li>
+              <a href="movie.html" class="footer-link">Movie</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">TV Show</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Web Series</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-link">Faq</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Terms of use</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Privacy</a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+}
+
+.custom-controls {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.custom-controls div {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: transform 0.3s;
+}
+
+.play-button::before {
+    content: "\25B6";
+}
+
+.play-button.playing::before {
+    content: "\23F8";
+}
+
+.volume-icon::before {
+    content: "\1F50A";
+}
+
+.fullscreen-icon::before {
+    content: "\2922";
+}
+
+.custom-controls input[type="range"] {
+    width: 100px;
+}
+
+#time-display {
+    width: 120px;
+    text-align: right;
+}

@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('C:\Users\madil\Desktop\umair web\filmlane-master\assets\images\backgroundmain222.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/images/okok.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        #video-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.377);
+            padding: 20px;
+        }
+        video {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Your other content goes here -->
+    <div id="video-container">
+        <video id="video-player" controls autoplay>
+            <source src="assets\images\Peaky Blinders _ Season 5 Trailer _ Netflix (1080p).mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

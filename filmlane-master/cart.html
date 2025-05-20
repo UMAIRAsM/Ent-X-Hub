@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EntXHUb_Imaginary World One Click Away</title>
+  <!-- <link href=  'https://fonts.googleapis.com/css?family=Roboto|Pacifico'            rel='stylesheet'> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+   <link rel="stylesheet" href="./assets/css/style.css"> 
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+ 
+ /* Shopping Cart Styles */
+
+.shopping-cart {
+    /* background: #dddddd6e; */
+    min-height: 85vh;
+    vertical-align: middle;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+}
+
+.shopping-cart .title {
+    margin-bottom: 5vh;
+}
+
+.shopping-cart .card {
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+
+@media (max-width: 767px) {
+    .shopping-cart .card {
+        margin: 3vh auto;
+    }
+
+    .shopping-cart .cart {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+
+    .shopping-cart .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
+    }
+}
+
+.shopping-cart .cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.shopping-cart .summary {
+    background-color: hsla(17, 68%, 58%, 0.623);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+
+/* .shopping-cart @media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
+    }
+} */
+
+
+.shopping-cart .summary .col-2 {
+    padding: 0;
+}
+
+.shopping-cart .summary .col-10 {
+    padding: 0;
+}
+
+.shopping-cart .row {
+    margin: 0;
+}
+
+.shopping-cart .title b {
+    font-size: 1.5rem;
+}
+
+.shopping-cart .main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+
+.shopping-cart .col-2,
+.shopping-cart .col {
+    padding: 0 1vh;
+}
+
+.shopping-cart a {
+    padding: 0 1vh;
+}
+
+.shopping-cart .close {
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+.shopping-cart img {
+    width: 3.5rem;
+}
+
+.shopping-cart .back-to-shop {
+    margin-top: 4.5rem;
+}
+
+.shopping-cart h5 {
+    margin-top: 4vh;
+}
+
+.shopping-cart hr {
+    margin-top: 1.25rem;
+}
+
+.shopping-cart form {
+    padding: 2vh 0;
+}
+
+.shopping-cart select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+.shopping-cart input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+.shopping-cart input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.shopping-cart .btn {
+    background-color: hsl(12, 91%, 47%);
+    border-color: #0000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+}
+
+.shopping-cart .btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none;
+}
+
+.shopping-cart .btn:hover {
+    color: white;
+}
+
+.shopping-cart a {
+    color: black;
+}
+
+.shopping-cart a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.shopping-cart #code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)),
+        url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+
+/* Add more styles as needed */
+
+</style>
+<body id="top" >
+ 
+<section class="umair">
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <img src="C:\Users\madil\Desktop\umair web\filmlane-master\readme-images\project-logo copywhite.png" alt="EntxHub logo">
+      </a>
+
+      <div class="header-actions">
+<ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Home</a>
+          </li>
+
+          <li>
+            <a href="movie.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Watch</a>
+          </li>
+
+          <li>
+            <a href="events.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Events</a>
+          </li>
+
+          <li>
+            <a href="games.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Games</a>
+          </li>
+
+          <li>
+            <a href="shop.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">Shop</a>
+          </li>
+
+          <li>
+            <a href="aboutus.html" class="navbar-link" style="font-family: 'Pacifico', cursive;">About</a>
+          </li>
+
+        </ul>
+        
+        <button class="search-btn" id="search-button">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+          <a href="C:\Users\madil\Desktop\umair web\filmlane-master\cart.html">
+           <button class="cartlogo" id="cartlogo" style="color: hsl(17, 68%, 58%);">
+        <ion-icon name="cart"></ion-icon>
+</button></a>
+        <div class="search-box" id="search-box">
+          <input type="text" placeholder="&nbsp;Search..." style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-style: italic;">
+          
+          
+        </div>
+        
+       
+
+
+        <a href="C:\Users\madil\Desktop\umair web\filmlane-master\loginmain.html"><button class="btn btn-primary" >Login</button></a>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="C:\Users\madil\Desktop\umair web\filmlane-master\readme-images\project-logo copywhite.png" alt="EntXHUb logo">
+          </a>
+ 
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
+        <div class="container">
+            <div class="shopping-cart">
+                
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-8 cart">
+                        <div class="title">
+                            <div class="row">
+                                <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                                <div class="col align-self-center text-right text-muted">3 items</div>
+                            </div>
+                        </div>    
+                        <div class="row border-top border-bottom">
+                            <div class="row main align-items-center">
+                                <div class="col-2"><img class="img-fluid" src="C:\Users\madil\Desktop\umair web\filmlane-master\assets\images\shop2.jpg"></div>
+                                <div class="col">
+                                    <div class="row text-muted">Clothing</div>
+                                    <div class="row">Barbie Croptop</div>
+                                </div>
+                                <div class="col">
+                                    <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                </div>
+                                <div class="col">Rs 1900.00 <span class="close">&#10005;</span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row main align-items-center">
+                                <div class="col-2"><img class="img-fluid" src="C:\Users\madil\Desktop\umair web\filmlane-master\assets\images\shop5.jpg"></div>
+                                <div class="col">
+                                    <div class="row text-muted">Clothing</div>
+                                    <div class="row">Captain America</div>
+                                </div>
+                                <div class="col">
+                                    <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                </div>
+                                <div class="col">Rs 1300.00 <span class="close">&#10005;</span></div>
+                            </div>
+                        </div>
+                        <div class="row border-top border-bottom">
+                            <div class="row main align-items-center">
+                                <div class="col-2"><img class="img-fluid" src="C:\Users\madil\Desktop\umair web\filmlane-master\koko.jpg"></div>
+                                <div class="col">
+                                    <div class="row text-muted">Events</div>
+                                    <div class="row">Concert</div>
+                                </div>
+                                <div class="col">
+                                    <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                </div>
+                                <div class="col">Rs 1200.00 <span class="close">&#10005;</span></div>
+                            </div>
+                        </div>
+                        <div class="back-to-shop"><a href="C:\Users\madil\Desktop\umair web\filmlane-master\shop.html">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+                    </div>
+                    <div class="col-md-4 summary">
+                        <div><h5><b>Summary</b></h5></div>
+                        <hr>
+                        <div class="row">
+                            <div class="col" style="padding-left:0;">ITEMS</div>
+                            <div class="col text-right"> 3</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="padding-left:0;">TOTAL</div>
+                            <div class="col text-right">Rs 4400.00</div>
+                        </div>
+                        <!-- <form>
+                            <p>SHIPPING</p>
+                            <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                            <p>GIVE CODE</p>
+                            <input id="code" placeholder="Enter your code">
+                        </form> -->
+                        <hr>
+                        <br><br>
+                        <div class="row">
+                            <div class="col" style="padding-left:0;">Delivery</div>
+                            <div class="col text-right">Rs 50.00</div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="padding-left:0;">Tax</div>
+                            <div class="col text-right">Rs 20.00</div>
+                        </div>
+                        <br><br><br>
+                        <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                            <div class="col">TOTAL PRICE</div>
+                            <div class="col text-right">RS 4470.00</div>
+                        </div>
+                        <button class="btn">CHECKOUT</button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+</div>
+  </div>
+
+
+</section>
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+
+
+      <!-- 
+        - #CTA
+      -->
+      
+  
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="C:\Users\madil\Desktop\umair web\filmlane-master\readme-images\project-logo copywhite.png" alt="EntXHub logo">
+          </a>
+
+          <ul class="footer-list">
+
+            <li>
+              <a href="./index.html" class="footer-link">Home</a>
+            </li>
+
+            <li>
+              <a href="movie.html" class="footer-link">Movie</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">TV Show</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Web Series</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-link">Faq</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Terms of use</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Privacy</a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
